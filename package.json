@@ -1,0 +1,22 @@
+{
+	"name" : "nai",
+	"description" : "NodeJS Ajax Interceptor",
+	"version" : "0.0.1",
+	"author" : "Clint Hill <clint.hill@gmail.com>",
+	"dependencies" : {
+		"apricot" : ">= 0.0.5",
+		"futures" : ">= 2.1.0"
+	},
+	"keywords" : ["nodejs", "ajax", "intercept", "web", "middleware"],
+	"repositories" : [
+		{
+			"type" : "git",
+			"url" : ""
+		}
+	],
+	"directories" : {
+		"lib" : "lib"
+	},
+	"main" : "./lib/nai",
+	"engines" : { "node" : ">= 0.4.8 < 0.5.0" }
+}
