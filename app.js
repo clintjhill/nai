@@ -5,15 +5,8 @@ var http = require('http'),
 http.createServer(function(req, res){
 	// add nai headers for tracing purposes
 	res.writeHead(200, nai.headers(req));
-	// get initial HTML to parse script tags
-	nai.request(
-		req.url, 
-		function(body){
-			var urls = nai.parse(body);
-			res.end(body);
-		}
-	);
-
+	// proxy to original source and end response
+	nai.request(req.url, undefined, res);
 }).listen(3001, "localhost");
 
 console.log("started nai on 3001");
